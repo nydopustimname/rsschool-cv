@@ -14,3 +14,5 @@ My main language is c#. I have been working with it for 1.5 years. Before it I w
 As for work experience, I didn’t have any large-scale projects to talk about. I’m learning by myself or on online courses, so I have only homework or tasks from my friends. I pass tests and got into Itransition courses last year, but my studying wasn’t enough successful. 
 
 I have been studying at the Belarusian State University of Informatic and Radioelectronic for 3 years. I watched online c# courses on Coursera and lectures on ITVDN and Youtube channels like SimpleCode, Byte++, Code Blog, Joe Rock.
+
+I was learning English since primary school, was continuing my education on gymnasium with English bias, so after graduating my language level was high enough. But during studying at the university it fell down. Now I can read and understand, but my grammar and accent are not really good.  I failed this test and my result was A2, but usually it’s between B1 and B2.
