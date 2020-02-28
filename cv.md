@@ -11,6 +11,56 @@ My current goal is to become an android developer, who can work both with orders
 
 My main language is c#. I have been working with it for 1.5 years. Before it I was learning c++ during 1 year at the university and by myself, when education program was not enough. Now I’m working with Xamarin Android for several months. 
 
+Last thing I do was short piece of code not for mobile, but for desktop app. It was made for person, who needs to create white fields around photos for Instagram. Now I’m writing a mobile version. 
+
+        using System;
+        using System.Drawing;
+        using System.Drawing.Imaging;
+        using System.Collections.Generic;
+
+        namespace ForCheck
+        {
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    var name = Console.ReadLine();
+                    CreateFields(name);
+                    Console.WriteLine("done");
+                    Console.ReadKey();
+                }
+
+                public static void CreateFields( string path)
+                {
+                    Image source = Bitmap.FromFile(path);
+
+                    int h = source.Height;
+                    int w = source.Width;
+                    source.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\1.jpg");
+                    var newW = 4 * h / 5;  //новая ширина
+                    var t = (newW - w) / 2;  //каждая сторона
+
+                    Image left = new Bitmap(t, h);
+                    using (Graphics grp = Graphics.FromImage(left))
+                    {
+                        grp.FillRectangle(
+                            Brushes.White, 0, 0, t, h);
+                    }
+
+                    Bitmap resultImage = new Bitmap(newW, h);
+
+                    using (Graphics g = Graphics.FromImage(resultImage))
+                    {
+                        g.DrawImage(left, 0, 0, left.Width, left.Height);
+                        g.DrawImage(source, left.Width, 0, w, h);
+                        g.DrawImage(left, source.Width + left.Width, 0, newW, h);
+                    }
+                    resultImage.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\white.jpg");
+                }
+            }
+        }
+
+
 As for work experience, I didn’t have any large-scale projects to talk about. I’m learning by myself or on online courses, so I have only homework or tasks from my friends. I pass tests and got into Itransition courses last year, but my studying wasn’t enough successful. 
 
 I have been studying at the Belarusian State University of Informatic and Radioelectronic for 3 years. I watched online c# courses on Coursera and lectures on ITVDN and Youtube channels like SimpleCode, Byte++, Code Blog, Joe Rock.
